@@ -1,0 +1,66 @@
+ion-title{
+    font-size: 14px;
+    text-align: center;
+    margin-right: 33px;
+  }  
+
+.backButton {
+    text-transform: none;
+    padding-left: 10px;
+}
+
+ion-icon {
+    font-size: 24px;
+  }
+
+
+.logger {
+    margin: 20px 10px 0px;
+    padding: 10px 15px 10px;
+    border-radius: 10px;
+    background: lightgray;
+}
+
+.previous-entries {
+    margin: 40px 10px 0px;
+}
+
+input[type="date"] {
+    background: none;
+    border: none;
+}
+
+input[type="time"] {
+    background: none;
+    border: none;
+    height: 40px;
+    font-size: 30px;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    border-radius: 5px;
+    margin: 4px 4px 4px;
+    height: 20px;
+    width: 20px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px;
+}
+
+.logButton {
+    text-transform: none;
+    --background: #2E81FF;
+    --background-hover: #2E81FF;
+    --background-activated: #2E81FF;
+    --background-focused: #2E81FF;
+    --color: white;
+    height: 30px;
+    font-size: 12px;
+
+}
+ion-card {
+    width: 300px;
+}
