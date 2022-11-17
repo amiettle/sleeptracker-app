@@ -2,7 +2,6 @@ import { StanfordSleepinessData } from './../data/stanford-sleepiness-data';
 import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import {AngularFirestore} from '@angular/fire/compat/firestore'
-import { Query } from '@angular/fire/compat/firestore';
 @Component({
   selector: 'app-test-ui',
   templateUrl: './test-ui.component.html',
