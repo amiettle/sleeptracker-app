@@ -1,5 +1,7 @@
+import { SleepLogModel } from './../../data/sleepLogModel';
 import { Time } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import {AngularFirestore} from '@angular/fire/compat/firestore'
 
 @Component({
   selector: 'app-sleep-logger',
@@ -8,22 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SleepLoggerPage implements OnInit {
 
-  startDate:Date;
-  startTime:Time;
-  endDate:Date;
-  endTime:Time;
-
-  constructor() { }
-
+  sleepStart:Date;
+  sleepEnd:Date;
+  entries: Array<any>;
+  constructor(private store:AngularFirestore) {
+    this.store.collection("sleep").valueChanges()
+   }
+  
   ngOnInit() {
   }
 
-  logEntry() {
-    var startDate = this.startDate;
-    var startTime = this.startTime;
-    var endDate = this.endDate;
-    var endTime = this.endTime;
-    console.log(startDate, startTime, endDate, endTime);
-  }
+  logSleep(){
 
+    this.store.collection("sleep").add({"sleepStart":this.sleepStart,"sleepEnd":this.sleepEnd});
+  }
+  
+  getLogs(){
+    this.store.collection("sleep",ref=>ref.orderBy("sleepEnd","desc")).get().subscribe((querySnap)=>{
+      this.entries = querySnap.docs.map(doc=>{
+        console.log((doc.data()["sleepStart"]))
+        return new SleepLogModel(new Date(doc.data()["sleepStart"]), new Date(doc.data()["sleepEnd"]))
+      });
+      console.log(this.entries)
+    })
+  }
 }

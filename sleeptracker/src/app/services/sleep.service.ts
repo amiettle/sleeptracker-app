@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { SleepData } from '../data/sleep-data';
 import { OvernightSleepData } from '../data/overnight-sleep-data';
 import { StanfordSleepinessData } from '../data/stanford-sleepiness-data';
-import { SleepLogModel } from '../data/sleepLogModel';
 @Injectable({
   providedIn: 'root'
 })
@@ -16,15 +15,15 @@ export class SleepService {
 	constructor(private firestore:AngularFirestore) {
 	}
 
-	private addDefaultData() {
-	}
+	// private addDefaultData() {
+	// }
 
-	public logOvernightData(sleepData:SleepLogModel) {
-		this.firestore.collection("sleep").add({sleepData});
-	}
+	// public logOvernightData(sleepData:SleepLogModel) {
+	// 	this.firestore.collection("sleep").add({sleepData});
+	// }
 
-	public logSleepinessData(sleepData:StanfordSleepinessData) {
-		SleepService.AllSleepData.push(sleepData);
-		SleepService.AllSleepinessData.push(sleepData);
-	}
+	// public logSleepinessData(sleepData:StanfordSleepinessData) {
+	// 	SleepService.AllSleepData.push(sleepData);
+	// 	SleepService.AllSleepinessData.push(sleepData);
+	// }
 }

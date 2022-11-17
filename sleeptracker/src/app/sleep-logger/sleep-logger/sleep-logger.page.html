@@ -12,23 +12,25 @@
 <ion-content>
   <div class="logger">
     <p style="font-weight: 500;">When did you go to sleep?</p>
-    <input [(ngModel)]="startDate" type="date" id="start-date" required>
-    <input [(ngModel)]="startTime" type="time" id="start-time" step="60" required>
+    <input [(ngModel)]="sleepStart" type="datetime-local" id="start-date" required>
     <p style="font-weight: 500;">When did you wake up?</p>
-    <input [(ngModel)]="endDate" type="date" id="end-date" required>
-    <input [(ngModel)]="endTime" type="time" id="end-time" step="60" required>
+    <input [(ngModel)]="sleepEnd" type="datetime-local" id="end-time" step="60" required>
     <div class="button-wrapper">
-      <ion-button class="logButton" (click)="logEntry()">Log entry</ion-button> <!--create log function-->
+      <ion-button class="logButton" (click)="logSleep()">Log entry</ion-button> <!--create log function-->
     </div>
   </div>
+
+  <button (click)="getLogs()">Get Entries</button>
+
   <div class="previous-entries">
     <p>Previous Entries</p>
     <ion-list *ngIf="entries">
       <ion-item *ngFor="let entry of entries"> <!--loop through previously submitted entries and populate list with card elements-->
         <ion-card>
           <ion-card-header>
-            <ion-card-title>{{ hoursSlept }}</ion-card-title>
-            <ion-card-subtitle>{{ date }}</ion-card-subtitle>
+            <ion-card-title></ion-card-title>
+            <ion-card-subtitle>{{entry.getStart()}}</ion-card-subtitle>
+            <ion-card-subtitle>{{entry.getEnd() }}</ion-card-subtitle>
           </ion-card-header>
         </ion-card>
       </ion-item>
