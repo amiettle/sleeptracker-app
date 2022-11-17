@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "a4-inf133-cf4c2": {
+      "hosting": {
+        "app": [
+          "a4-inf133-cf4c2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "a4-inf133-cf4c2"
+  }
+}
