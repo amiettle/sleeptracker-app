@@ -14,7 +14,8 @@ export class SleepLoggerPage implements OnInit {
   sleepEnd:Date;
   entries: Array<any>;
   constructor(private store:AngularFirestore) {
-    this.store.collection("sleep").valueChanges()
+    this.getLogs()
+    this.store.collection("sleep").valueChanges().subscribe(()=>{this.getLogs()})
    }
   
   ngOnInit() {
@@ -28,10 +29,8 @@ export class SleepLoggerPage implements OnInit {
   getLogs(){
     this.store.collection("sleep",ref=>ref.orderBy("sleepEnd","desc")).get().subscribe((querySnap)=>{
       this.entries = querySnap.docs.map(doc=>{
-        console.log((doc.data()["sleepStart"]))
         return new SleepLogModel(new Date(doc.data()["sleepStart"]), new Date(doc.data()["sleepEnd"]))
       });
-      console.log(this.entries)
     })
   }
 }
