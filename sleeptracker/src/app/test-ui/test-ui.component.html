@@ -1,0 +1,16 @@
+<p>
+  What time did you sleep?
+  <ion-datetime presentation="time-date" [(ngModel)]="sleepStart"></ion-datetime>
+</p>
+<p>
+  What time did you wake up?
+  <ion-datetime presentation="time-date" [(ngModel)]="sleepEnd"></ion-datetime>
+</p>
+
+<button (click)="logSleep()">LOG SLEEP</button>
+
+<p>{{sleepStart}} {{sleepEnd}}</p>
+
+<button (click)="getLogs()">Get Logs</button>
+
+<button (click)="logSleepiness()">log sleepiness</button>

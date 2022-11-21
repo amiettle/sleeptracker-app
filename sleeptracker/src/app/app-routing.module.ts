@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sleep-logger',
+    loadChildren: () => import('./sleep-logger/sleep-logger/sleep-logger.module').then( m => m.SleepLoggerPageModule)
+  },
+  {
+    path: 'sleepiness-logger',
+    loadChildren: () => import('./sleepiness-logger/sleepiness-logger/sleepiness-logger.module').then( m => m.SleepinessLoggerPageModule)
+  },
 ];
 
 @NgModule({
