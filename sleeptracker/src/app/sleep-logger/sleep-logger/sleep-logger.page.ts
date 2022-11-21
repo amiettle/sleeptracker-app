@@ -22,7 +22,6 @@ export class SleepLoggerPage implements OnInit {
   }
 
   logSleep(){
-
     this.store.collection("sleep").add({"sleepStart":this.sleepStart,"sleepEnd":this.sleepEnd});
   }
   

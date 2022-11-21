@@ -13,19 +13,19 @@
 <ion-content>
   <p>Your Digital Diary for recording your sleepiness throughout each day</p>
   <label for="diary-date" style="display: block;">Select a date:</label>
-  <input [(ngModel)]="entryDate" type="date" id="diary-date" required> <!--load entries based on date, set default date to current date-->
+  <input [(ngModel)]="entryDate" type="date" id="diary-date" required (ngModelChange)="getSleepiness()" > <!--load entries based on date, set default date to current date-->
   <p>Sleepiness History</p>
-  <div class="sleepiness-history" *ngIf="diaryEntries">
+  <div class="sleepiness-history" *ngIf="entries">
     <div class="entry-list">
       <ion-card *ngFor="let entry of entries"> <!--loop through entries and create card for each entry-->
         <ion-card-header>
-          <ion-card-subtitle><!--entry name--></ion-card-subtitle>
-          <ion-card-subtitle><!--entry sleepiness rating--></ion-card-subtitle>
+          <ion-card-subtitle>{{entry["title"]}}</ion-card-subtitle>
+          <ion-card-subtitle>{{entry["sleepiness"]}}</ion-card-subtitle>
         </ion-card-header>
       </ion-card>
     </div>
   </div>
-  <div *ngIf="!diaryEntries">
+  <div *ngIf="!entries">
     <ion-card>
       <ion-card-content>
         Nothing here yet... tap the button below to add a new entry
@@ -103,4 +103,5 @@
       </ion-content>
     </ng-template>
   </ion-modal>
+  <button (click)="logEntries()">log entries</button>
 </ion-content>
