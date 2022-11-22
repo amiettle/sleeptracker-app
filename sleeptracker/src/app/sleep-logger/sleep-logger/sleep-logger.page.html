@@ -13,27 +13,28 @@
   <div class="logger">
     <p style="font-family: Karla, 'sans-serif'; font-weight:600; font-size: 16px; text-transform: uppercase; color: #080A4C;">Begin Logging</p>
     <div class="buttons-wrapper">
-      <ion-button><ion-icon name="play"></ion-icon></ion-button> <!--Add play button function-->
-      <ion-button><ion-icon name="stop"></ion-icon></ion-button> <!--Add stop button function-->
+      <ion-button (click)="start()" class="start-stop-buttons" [disabled]="sleepStart!=null" ><ion-icon name="play"></ion-icon></ion-button> <!--Add play button function-->
+      <ion-button (click)="stop()" class="start-stop-buttons" [disabled]="sleepStart==null"><ion-icon name="stop"></ion-icon></ion-button> <!--Add stop button function-->
     </div>
     <p style="font-family: Karla, 'sans-serif'; font-weight:600; font-size: 16px; text-transform: uppercase; color: #080A4C;">Or</p>
     <p style="font-weight: 500; font-size: 14px; color:#fff;">When did you go to sleep?</p>
-    <input [(ngModel)]="sleepStart" type="datetime-local" id="start-date" required>
+    <input [(ngModel)]="manualStart" type="datetime-local" id="start-date" required>
     <p style="font-weight: 500; font-size: 14px; color:#fff;">When did you wake up?</p>
-    <input [(ngModel)]="sleepEnd" type="datetime-local" id="end-time" step="60" required>
+    <input [(ngModel)]="manualEnd" type="datetime-local" id="end-time" step="60" required>
     <div class="button-wrapper">
-      <ion-button class="logButton" (click)="logSleep()">Manually Log</ion-button>
+      <ion-button class="logButton" (click)="logManualSleep()" [disabled]="manualStart=='' || manualEnd =='' ">Manually Log</ion-button>
     </div>
   </div>
-
+  <button (click)="getLogs()">get logs</button>
   <div class="previous-entries">
     <p style="font-family: Lexend, 'sans-serif'; font-weight:500; font-size: 18px; color: #fff;">Previous Entries</p>
     <div *ngIf="entries">
       <div *ngFor="let entry of entries" color="none" lines="none"> <!--loop through previously submitted entries and populate with card elements-->
         <ion-card>
           <ion-card-header>
-            <ion-card-title>MON NOV 21<!--date formatted--></ion-card-title>
-            <ion-card-subtitle>Slept for 9 hours, 2 minutes<!--Slept for ...hours, ...minutes--></ion-card-subtitle>
+            <ion-card-title>{{entry.start.toDateString()}} to {{entry.end.toDateString()}}</ion-card-title>
+            <ion-card-title>{{entry.start.toLocaleTimeString()}} to {{entry.end.toLocaleTimeString()}}</ion-card-title>
+            <ion-card-subtitle>Slept for {{getDifference(entry.start,entry.end)}}<!--Slept for ...hours, ...minutes--></ion-card-subtitle>
           </ion-card-header>
         </ion-card>
       </div>
