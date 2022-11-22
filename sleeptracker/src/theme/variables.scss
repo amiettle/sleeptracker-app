@@ -76,6 +76,17 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #333
+);
+
+
+
+
 // @media (prefers-color-scheme: dark) {
 //   /*
 //    * Dark Colors

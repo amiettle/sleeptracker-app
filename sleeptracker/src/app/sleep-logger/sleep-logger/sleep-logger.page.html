@@ -11,27 +11,32 @@
 
 <ion-content>
   <div class="logger">
-    <p style="font-weight: 500;">When did you go to sleep?</p>
+    <p style="font-family: Karla, 'sans-serif'; font-weight:600; font-size: 16px; text-transform: uppercase; color: #080A4C;">Begin Logging</p>
+    <div class="buttons-wrapper">
+      <ion-button><ion-icon name="play"></ion-icon></ion-button> <!--Add play button function-->
+      <ion-button><ion-icon name="stop"></ion-icon></ion-button> <!--Add stop button function-->
+    </div>
+    <p style="font-family: Karla, 'sans-serif'; font-weight:600; font-size: 16px; text-transform: uppercase; color: #080A4C;">Or</p>
+    <p style="font-weight: 500; font-size: 14px; color:#fff;">When did you go to sleep?</p>
     <input [(ngModel)]="sleepStart" type="datetime-local" id="start-date" required>
-    <p style="font-weight: 500;">When did you wake up?</p>
+    <p style="font-weight: 500; font-size: 14px; color:#fff;">When did you wake up?</p>
     <input [(ngModel)]="sleepEnd" type="datetime-local" id="end-time" step="60" required>
     <div class="button-wrapper">
-      <ion-button class="logButton" (click)="logSleep()">Log entry</ion-button> <!--create log function-->
+      <ion-button class="logButton" (click)="logSleep()">Manually Log</ion-button>
     </div>
   </div>
 
   <div class="previous-entries">
-    <p>Previous Entries</p>
-    <ion-list *ngIf="entries">
-      <ion-item *ngFor="let entry of entries"> <!--loop through previously submitted entries and populate list with card elements-->
+    <p style="font-family: Lexend, 'sans-serif'; font-weight:500; font-size: 18px; color: #fff;">Previous Entries</p>
+    <div *ngIf="entries">
+      <div *ngFor="let entry of entries" color="none" lines="none"> <!--loop through previously submitted entries and populate with card elements-->
         <ion-card>
           <ion-card-header>
-            <ion-card-title></ion-card-title>
-            <ion-card-subtitle>{{entry.getStart()}}</ion-card-subtitle>
-            <ion-card-subtitle>{{entry.getEnd() }}</ion-card-subtitle>
+            <ion-card-title>MON NOV 21<!--date formatted--></ion-card-title>
+            <ion-card-subtitle>Slept for 9 hours, 2 minutes<!--Slept for ...hours, ...minutes--></ion-card-subtitle>
           </ion-card-header>
         </ion-card>
-      </ion-item>
-    </ion-list>
+      </div>
+    </div>
   </div>
 </ion-content>
