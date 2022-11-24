@@ -25,7 +25,6 @@
       <ion-button class="logButton" (click)="logManualSleep()" [disabled]="manualStart=='' || manualEnd =='' ">Manually Log</ion-button>
     </div>
   </div>
-  <button (click)="getLogs()">get logs</button>
   <div class="previous-entries">
     <p style="font-family: Lexend, 'sans-serif'; font-weight:500; font-size: 18px; color: #fff;">Previous Entries</p>
     <div *ngIf="entries">
