@@ -2,7 +2,32 @@ ion-title{
     font-size: 14px;
     text-align: center;
     margin-right: 33px;
-  }  
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  ion-content {
+    --background: url('../../../assets/sleep-logger-page-bg.png') 0 0/100% 100% no-repeat;
+    background-attachment: fixed;
+    // // overwrite inline styles
+    // --offset-bottom: auto!important;
+    // --overflow: hidden;
+    // overflow: auto;
+
+    // &::part(background) {
+    //     bottom: 0;
+    // }
+
+    // &::-webkit-scrollbar {
+    //     display: none;
+    //     scrollbar-width: none;
+    // }
+  }
+
+ion-content p {
+    margin: 5px 0px 5px;
+}
 
 .backButton {
     text-transform: none;
@@ -15,52 +40,82 @@ ion-icon {
 
 
 .logger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 20px 10px 0px;
-    padding: 10px 15px 10px;
+    padding: 5px 1px 5px;
     border-radius: 10px;
-    background: lightgray;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+
+.buttons-wrapper ion-button {
+    margin: 0px 15px 0px;
+    --color: white;
+    --background: #DFC976;
+    --border-radius: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.ion-button{
+    margin: 0px 15px 0px;
+    --color: white;
+    --background: #DFC976;
+    --border-radius: 10px;
+    height: 50px;
+    width: 50px;
 }
 
 .previous-entries {
     margin: 40px 10px 0px;
 }
 
-input[type="date"] {
+input[type="datetime-local"] {
     background: none;
     border: none;
-}
-
-input[type="time"] {
-    background: none;
-    border: none;
-    height: 40px;
-    font-size: 30px;
-}
-
-input[type="time"]::-webkit-calendar-picker-indicator {
-    border-radius: 5px;
-    margin: 4px 4px 4px;
-    height: 20px;
-    width: 20px;
 }
 
 .button-wrapper {
     display: flex;
     justify-content: center;
-    margin: 20px 0px 20px;
+    margin: 10px 0px 10px;
 }
 
 .logButton {
     text-transform: none;
-    --background: #2E81FF;
-    --background-hover: #2E81FF;
-    --background-activated: #2E81FF;
-    --background-focused: #2E81FF;
+    --background: #DFC976;
+    --background-hover: #DFC976;
+    --background-activated: #DFC976;
+    --background-focused: #DFC976;
     --color: white;
     height: 30px;
     font-size: 12px;
+    font-family: Karla, 'sans-serif';
+    font-weight: 600;
+    --border-radius: 10px;
 
 }
-ion-card {
-    width: 300px;
+
+
+.previous-entries ion-card {
+    margin: 10px 1px 10px;
+    background: rgba(97, 110, 156, 0.8);
+}
+
+.previous-entries ion-card-title {
+    color: #080A4C;
+    font-family: Karla, 'sans-serif';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.previous-entries ion-card-subtitle {
+    color: #fff;
+    font-family: Karla, 'sans-serif';
+    font-weight: 600;
+    font-size: 18px;
 }

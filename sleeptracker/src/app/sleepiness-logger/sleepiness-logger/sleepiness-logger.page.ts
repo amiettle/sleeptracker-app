@@ -2,6 +2,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonModal } from '@ionic/angular';
 import { OverlayEventDetail } from '@ionic/core/components';
+import { Timestamp } from 'rxjs';
 
 @Component({
   selector: 'app-sleepiness-logger',
@@ -61,6 +62,10 @@ export class SleepinessLoggerPage implements OnInit {
   
   logEntries(){
     console.log(this.entries)
+  }
+
+  getDate(entry){
+    return new Date(entry.logged.seconds*1000).toLocaleTimeString()
   }
 }
 
