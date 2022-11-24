@@ -1,4 +1,4 @@
---Readme document for Kenny Tran, kennyt11@uci.edu, 87199643 and Amie Le, amietl@uci, 80002154
+--Readme document for Kenny Tran, kennyt11@uci.edu, 87199643 and Amie Le, amietl@uci.edu, 80002154
 
 1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
 
