@@ -225,6 +225,6 @@ Project Link: [https://github.com/amiettle/sleeptracker-app](https://github.com/
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [Ionic-url]: https://ionicframework.com/
-[IonicFramework.com]: https://ionicframework.com/docs/logos/ionic-text-docs-dark.svg
+[IonicFramework.com]: https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white
 [Firebase-url]: https://firebase.google.com/
-[Firebase.com]: https://www.gstatic.com/devrel-devsite/prod/v96c9f4c7361e162d551bf5e976e44bdb25c320f124e0cabc0d8149eef7bbdf40/firebase/images/lockup.svg
+[Firebase.com]: https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black
