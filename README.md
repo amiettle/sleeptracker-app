@@ -1,70 +1,232 @@
---Readme document for Kenny Tran, kennyt11@uci.edu, 87199643 and Amie Le, amietl@uci.edu, 80002154
-
-1. How many assignment points do you believe you completed (replace the *'s with your numbers)?
-
-20/20
-- 2/2 The ability to log overnight sleep
-- 2/2 The ability to log sleepiness during the day
-- 2/2 The ability to view these two categories of logged data
-- 4/4 Either using a native device resource or backing up logged data
-- 4/4 Following good principles of mobile design
-- 4/4 Creating a compelling app
-- 2/2 A readme and demo video which explains how these features were implemented and their design rationale
-
-2. How long, in hours, did it take you to complete this assignment?
-    About 15 hours
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
 
-3. What online resources did you consult when completing this assignment? (list specific URLs)
-https://ionicframework.com/docs/components
-https://github.com/angular/angularfire
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+<!-- [![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
-4. What classmates or other individuals did you consult as part of this assignment? What did you discuss?
-    Just each other: Amie Le & Kenny Tran
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <!-- <a href="https://github.com/amiettle/sleeptracker-app">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a> -->
+
+<h3 align="center">Sleeptracker Mobile App</h3>
+
+  <p align="center">
+    A mobile application that allows users to 1) log overnight sleep by intaking their sleep duration and storing this data in Firebase, from which previous entries can be retrieved and displayed chronologically, and 2) log sleepiness throughout the day according to the Stanford Sleepiness Scale in a digital diary that displays and loads entries according to the selected date.
+    <br />
+    <a href="https://github.com/amiettle/sleeptracker-app"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/amiettle/sleeptracker-app">View Demo</a>
+    ·
+    <a href="https://github.com/amiettle/sleeptracker-app/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/amiettle/sleeptracker-app/issues">Request Feature</a>
+  </p>
+</div>
 
 
-5. Is there anything special we need to know in order to run your code?
-    Should just need an npm install
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li> -->
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
+  </ol>
+</details>
 
 
---Aim for no more than two sentences for each of the following questions.--
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `amiettle`, `sleeptracker-app`, `twitter_handle`, `amiettle`, `gmail`, `amiettle`, `project_title`, `project_description`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-6. Did you design your app with a particular type of user in mind? If so, whom?
-    No, anyone can use it, but the app is designed to work for a mobile device user: android or ios
+
+### Built With
+
+* [![Firebase][Firebase.com]][Firebase-url]
+* [![Ionic][IonicFramework.com]][Ionic-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-7. Did you design your app specifically for iOS or Android, or both?
-    Both. We did not use any native device features.
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+<!-- This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps. -->
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/amiettle/sleeptracker-app.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-8. How can a person log overnight sleep in your app? Why did you choose to support logging overnight sleep in this way?
-    You can log overnight sleep by pressing the start then stop button. This is designed to be press when you sleep and wakeup.
-    Or enter the date and time you slept and woke up manually.
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+*ionic emulator
+  ```sh
+  ionic lab
+  ```
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-9. How can a person log sleepiness during the day in your app? Why did you choose to support logging sleepiness in this way?
-    There will be a button at the bottom of the screen that will popup a modal dialog where you can input the sleepiness info.
-    Then press confirm.
+
+<!-- ROADMAP -->
+<!-- ## Roadmap
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+
+See the [open issues](https://github.com/amiettle/sleeptracker-app/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
-10. How can a person view the data they logged in your app? Why did you choose to support viewing logged data in this way?
-    For overnight sleep,  the data is displayed write below the input form. This way they can see all the info on the same screen and scroll to see older dates.
-    For sleepiness they select a day, and the logs for that day is displayed.
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-11. Which feature choose--using a native device resource, backing up logged data, or both?
-    Backing up data
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - amiettle@gmail.com
+
+Project Link: [https://github.com/amiettle/sleeptracker-app](https://github.com/amiettle/sleeptracker-app)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-12. If you used a native device resource, what feature did you add? How does this feature change the app's experience for a user?
-    N/A
+
+<!-- ACKNOWLEDGMENTS -->
+<!-- ## Acknowledgments
+
+* []()
+* []()
+* []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 
-13. If you backed up logged data, where does it back up to?
-    It backs up to firebase's firestore database.
 
-14. How does your app implement or follow principles of good mobile design?
-    We have a useful initial view, and allow users to return to previous screens if they misclicked. 
-    The app is designed to be easy to use for mobile devices, e.g a start/stop button to log sleep. 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/amiettle/sleeptracker-app.svg?style=for-the-badge
+[contributors-url]: https://github.com/amiettle/sleeptracker-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/amiettle/sleeptracker-app.svg?style=for-the-badge
+[forks-url]: https://github.com/amiettle/sleeptracker-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/amiettle/sleeptracker-app.svg?style=for-the-badge
+[stars-url]: https://github.com/amiettle/sleeptracker-app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/amiettle/sleeptracker-app.svg?style=for-the-badge
+[issues-url]: https://github.com/amiettle/sleeptracker-app/issues
+[license-shield]: https://img.shields.io/github/license/amiettle/sleeptracker-app.svg?style=for-the-badge
+[license-url]: https://github.com/amiettle/sleeptracker-app/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/amiettle
+[product-screenshot]: images/screenshot.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com 
+[Ionic-url]: https://ionicframework.com/
+[Firebase-url]: https://firebase.google.com/
