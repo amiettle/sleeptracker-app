@@ -83,10 +83,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `amiettle`, `sleeptracker-app`, `twitter_handle`, `amiettle`, `gmail`, `amiettle`, `project_title`, `project_description`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -229,4 +225,6 @@ Project Link: [https://github.com/amiettle/sleeptracker-app](https://github.com/
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
 [Ionic-url]: https://ionicframework.com/
+[IonicFramework.com]: https://ionicframework.com/docs/logos/ionic-text-docs-dark.svg
 [Firebase-url]: https://firebase.google.com/
+[Firebase.com]: https://www.gstatic.com/devrel-devsite/prod/v96c9f4c7361e162d551bf5e976e44bdb25c320f124e0cabc0d8149eef7bbdf40/firebase/images/lockup.svg
